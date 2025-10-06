@@ -1,31 +1,27 @@
-const defaultResult = 100;
+const defaultResult = 0;
 let currCalculatadResult = defaultResult;
 
-function addition(num1, num2) {
-  const result = num1 + num2;
-  return result;
+function addition() {
+  currCalculatadResult = currCalculatadResult + userInput.value;
+  outputResult(currCalculatadResult, "");
 }
 
-function substraction(num1, num2) {
-  const result = num1 - num2;
-  return result;
+function substraction() {
+  currCalculatadResult = currCalculatadResult - userInput.value;
+  outputResult(currCalculatadResult, "");
 }
 
-function multiply(num1, num2) {
-  const result = num1 * num2;
-  return result;
+function multiply() {
+  currCalculatadResult = currCalculatadResult * userInput.value;
+  outputResult(currCalculatadResult, "");
 }
 
-function divide(num1, num2) {
-  const result = num1 / num2;
-  return result;
+function divide() {
+  currCalculatadResult = currCalculatadResult / userInput.value;
+  outputResult(currCalculatadResult, "");
 }
 
-// User input
-currCalculatadResult = currCalculatadResult + 7;
+addBtn.addEventListener("click", addition);
 
-// Calculation description
 // let calculationDescription = defaultResult + " + 7";
-let calculationDescription = `${defaultResult} + 7`;
-
-outputResult(currCalculatadResult, calculationDescription);
+// let calculationDescription = `${defaultResult} + 7`;
